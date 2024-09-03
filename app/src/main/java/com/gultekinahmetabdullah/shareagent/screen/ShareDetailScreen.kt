@@ -137,8 +137,11 @@ fun DetailCard(title: String, value: String, isHighlighted: Boolean = false) {
                     ),
                     color = Color.White
                 )
+
+                val newValue = value.toDoubleOrNull() ?: 0.0
+
                 Text(
-                    text = value,
+                    text = String.format("%.2f", newValue),
                     style = MaterialTheme.typography.bodyLarge.copy(
                         fontSize = 14.sp
                     ),

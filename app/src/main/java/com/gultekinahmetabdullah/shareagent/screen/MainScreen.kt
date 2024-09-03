@@ -3,12 +3,12 @@ package com.gultekinahmetabdullah.shareagent.screen
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -24,7 +24,9 @@ fun MainScreen(viewModel: SharesViewModel) {
         startDestination = "shareList",
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .background(
+                color = Color.Black
+            ),
         contentAlignment = Alignment.Center,
         enterTransition = {
             slideInHorizontally(
